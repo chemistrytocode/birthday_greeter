@@ -1,0 +1,66 @@
+<html>
+<head>
+<style>
+  body {
+    background-color: #C0DDFF;
+  }
+  h1, label, input, select {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  h1 {
+    font-size: 100px;
+    margin-top: 50px;
+  }
+  label.big {
+    font-size: 50px;
+  }
+  label.small {
+    font-size: 30px;
+  }
+  input, select {
+    font-size: 30px;
+    margin-top: 15px;
+  }
+  input[type=text], input[type=submit] {
+    width: 25%;
+  }
+  input[type=submit] {
+    border: none;
+    height: 25px;
+  }
+  input[type=number] {
+    width: 75px;
+  }
+</style>
+</head>
+
+<body>
+<h1 align=center>Hello there!</h1>
+<form align=center action="/birthday" method="post">
+  <label class="big" for="name">What's your name?</label> <br>
+  <input class="big" type="text", name="name"> <br>
+  <label class="big" for="birthday">When's your birthday?</label> <br>
+  <label class="small" for="day">day:</label>
+  <input type="number", name="day">
+  <label class="small" for="month">month:</label>
+  <select name="month">
+    <option>January</option>
+    <option>Feburary</option>
+    <option>March</option>
+    <option>April</option>
+    <option>May</option>
+    <option>June</option>
+    <option>July</option>
+    <option>August</option>
+    <option>September</option>
+    <option>October</option>
+    <option>November</option>
+    <option>December</option>
+  </select> <br>
+  <input type="submit" value="Go!" style="height:50px"/>
+</form>
+</body>
+</html>
+
+<!--
+add required on form -->
