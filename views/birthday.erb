@@ -1,32 +1,22 @@
+<!DOCTYPE html>
 <html>
 <head>
-<style>
-  body {
-    background-color: #C0DDFF;
-    font-family: Arial, Helvetica, sans-serif;
-    font-style: normal;
-  }
-  h1 {
-    font-size: 75px;
-    position: relative;
-    top: 200px;
-  }
-</style>
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
 </head>
 
 <body>
 <% if @birthday_check.birthday? %>
   <div align=center>
-    <h1>Happy Birthday <%= @name %>!</h1>
+    <h1 class="hb">Happy Birthday <%= @name %>!</h1>
   </div>
   <% elsif @between < 0 %>
   <div align=center>
-    <h1>Your birthday was <%= @between.abs %> days ago, <%= @name %>
-    <h1>Your next birthday will be in <%= @between + 365 %> days</h1>
+    <h1 class="hb">Your birthday was <%= @between.abs %> days ago, <%= @name %>
+    <h1 class="hb">Your next birthday will be in <%= @between + 365 %> days</h1>
   </div>
   <% else %>
   <div align=center>
-    <h1>Your birthday will be in <%= @between %> days, <%= @name %></h1>
+    <h1 class="hb">Your birthday will be in <%= @between %> days, <%= @name %></h1>
   </div>
   <% end %>
 
